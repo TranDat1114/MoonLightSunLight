@@ -6,10 +6,8 @@
 }
 
 body {
-    font-family: 'Rubik', -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Rubik', -apple-system,
+        "Segoe UI", "Roboto", "Oxygen";
 
 
     margin: 0;
@@ -27,7 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color .1s;
+    transition: background-color .0s;
 }
 
 
@@ -82,7 +80,7 @@ body {
     background: #fff;
     transform: scale(0);
     transform-origin: top right;
-    transition: transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 p {
@@ -119,7 +117,6 @@ label {
 }
 
 .names {
-    font-size: 90%;
     font-weight: bolder;
     width: 65%;
     margin-left: 17.5%;
