@@ -1,0 +1,172 @@
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+
+
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    color: #FF8C00;
+    position: relative;
+    background-color: #fff;
+
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .1s;
+}
+
+
+/* Phone */
+.phone {
+    position: relative;
+    z-index: 2;
+    width: 21rem;
+    height: 45rem;
+    background-color: inherit;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, .2);
+    border-radius: 40px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.cre {
+
+    margin-top: 150px;
+    margin-bottom: -150px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 500;
+}
+
+/* Middle */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    transform: translateY(5%);
+}
+
+.circle {
+    position: relative;
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    background: linear-gradient(40deg, #ffe100d2, #FF8C00 70%);
+    margin: auto;
+}
+
+.crescent {
+    position: absolute;
+    border-radius: 100%;
+    right: 0;
+    width: 6rem;
+    height: 6rem;
+    background: #fff;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform .6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+p {
+    font-size: 90%;
+}
+
+.heading {
+    font-size: 140%;
+    font-weight: bolder;
+    margin: 3rem 0 .2rem 0;
+}
+
+label,
+.toggle {
+    height: 2.8rem;
+    border-radius: 100px;
+}
+
+label {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 100px;
+    position: relative;
+    margin: 1.8rem 0 4rem 0;
+    cursor: pointer;
+}
+
+.toggle {
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .15);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.names {
+    font-size: 90%;
+    font-weight: bolder;
+    width: 65%;
+    margin-left: 17.5%;
+    margin-top: .5%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.dark {
+    opacity: .5;
+}
+
+
+/* -------- Switch Styles ------------*/
+[type="checkbox"] {
+    display: none;
+}
+
+/* App */
+[type="checkbox"]:checked+.body {
+    background-color: #26242E;
+    color: #BC6FF1;
+}
+
+/* Toggle */
+[type="checkbox"]:checked+.body .phone .toggle {
+    transform: translateX(100%);
+    background-color: #34323D;
+}
+
+[type="checkbox"]:checked+.body .phone .dark {
+    opacity: 1;
+}
+
+[type="checkbox"]:checked+.body .phone .light {
+    opacity: .5;
+}
+
+
+/* Circle */
+[type="checkbox"]:checked+.body .phone .crescent {
+    transform: scale(0.9);
+    background: #26242E;
+}
+
+[type="checkbox"]:checked+.body .phone .circle {
+    background: linear-gradient(40deg, #8983F7, #BC6FF1 70%);
+}
